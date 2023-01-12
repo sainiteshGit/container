@@ -196,13 +196,19 @@ module.exports = new Promise(function(resolve, reject) {
 /******/ 	!function() {
 /******/ 		var chunkMapping = {
 /******/ 			"src_bootstrap_js": [
-/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index"
+/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index",
+/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd2Index"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
 /******/ 			"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index": [
 /******/ 				"default",
 /******/ 				"./MicroFrontEnd1Index",
+/******/ 				"webpack/container/reference/microFrontEnd1"
+/******/ 			],
+/******/ 			"webpack/container/remote/microFrontEnd1/MicroFrontEnd2Index": [
+/******/ 				"default",
+/******/ 				"./MicroFrontEnd2Index",
 /******/ 				"webpack/container/reference/microFrontEnd1"
 /******/ 			]
 /******/ 		};

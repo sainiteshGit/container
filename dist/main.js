@@ -41,6 +41,30 @@ module.exports = new Promise(function(resolve, reject) {
 	}, "microFrontEnd1");
 }).then(function() { return microFrontEnd1; });
 
+/***/ }),
+
+/***/ "webpack/container/reference/microFrontEnd2":
+/*!**********************************************************************!*\
+  !*** external "microFrontEnd2@http://localhost:8082/remoteEntry.js" ***!
+  \**********************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise(function(resolve, reject) {
+	if(typeof microFrontEnd2 !== "undefined") return resolve();
+	__webpack_require__.l("http://localhost:8082/remoteEntry.js", function(event) {
+		if(typeof microFrontEnd2 !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "microFrontEnd2");
+}).then(function() { return microFrontEnd2; });
+
 /***/ })
 
 /******/ 	});
@@ -197,7 +221,7 @@ module.exports = new Promise(function(resolve, reject) {
 /******/ 		var chunkMapping = {
 /******/ 			"src_bootstrap_js": [
 /******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index",
-/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd2Index"
+/******/ 				"webpack/container/remote/microFrontEnd2/MicroFrontEnd2Index"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
@@ -206,10 +230,10 @@ module.exports = new Promise(function(resolve, reject) {
 /******/ 				"./MicroFrontEnd1Index",
 /******/ 				"webpack/container/reference/microFrontEnd1"
 /******/ 			],
-/******/ 			"webpack/container/remote/microFrontEnd1/MicroFrontEnd2Index": [
+/******/ 			"webpack/container/remote/microFrontEnd2/MicroFrontEnd2Index": [
 /******/ 				"default",
 /******/ 				"./MicroFrontEnd2Index",
-/******/ 				"webpack/container/reference/microFrontEnd1"
+/******/ 				"webpack/container/reference/microFrontEnd2"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = function(chunkId, promises) {
@@ -297,6 +321,7 @@ module.exports = new Promise(function(resolve, reject) {
 /******/ 			switch(name) {
 /******/ 				case "default": {
 /******/ 					initExternal("webpack/container/reference/microFrontEnd1");
+/******/ 					initExternal("webpack/container/reference/microFrontEnd2");
 /******/ 				}
 /******/ 				break;
 /******/ 			}

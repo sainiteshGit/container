@@ -220,20 +220,20 @@ module.exports = new Promise(function(resolve, reject) {
 /******/ 	!function() {
 /******/ 		var chunkMapping = {
 /******/ 			"src_bootstrap_js": [
-/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index",
-/******/ 				"webpack/container/remote/microFrontEnd2/MicroFrontEnd2Index"
+/******/ 				"webpack/container/remote/microFrontEnd2/MicroFrontEnd2Index",
+/******/ 				"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index"
 /******/ 			]
 /******/ 		};
 /******/ 		var idToExternalAndNameMapping = {
-/******/ 			"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index": [
-/******/ 				"default",
-/******/ 				"./MicroFrontEnd1Index",
-/******/ 				"webpack/container/reference/microFrontEnd1"
-/******/ 			],
 /******/ 			"webpack/container/remote/microFrontEnd2/MicroFrontEnd2Index": [
 /******/ 				"default",
 /******/ 				"./MicroFrontEnd2Index",
 /******/ 				"webpack/container/reference/microFrontEnd2"
+/******/ 			],
+/******/ 			"webpack/container/remote/microFrontEnd1/MicroFrontEnd1Index": [
+/******/ 				"default",
+/******/ 				"./MicroFrontEnd1Index",
+/******/ 				"webpack/container/reference/microFrontEnd1"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = function(chunkId, promises) {
